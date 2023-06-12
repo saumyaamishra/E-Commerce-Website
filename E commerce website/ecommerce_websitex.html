@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> Eccomerce Website </title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Spartan', sans-serif;
+        }
+        h1 {
+            font-size: 50px;
+            line-height: 64px;
+            color: #222;
+        }
+        h2 {
+            font-size: 46px;
+            line-height: 54px;
+            color: #222;
+        }
+        h4 {
+            font-size: 20px;
+            color: #222;
+        }
+        h6 {
+            font-weight: 700;
+            font-size: 12px;
+        }
+        p {
+            font-size: 16px;
+            color: #465b52;
+            margin: 15px 0 20px 0;
+        }
+        .section-p1 {
+            padding: 100px 40px;
+            align-items: center;
+        }
+        .section-m1 {
+            margin: 40px 0;
+        }
+        body {
+            width: 100%;
+        }
+        .logo {
+            width: 100px;
+        }
+        #imgwid {
+            width: 150px;
+            height: 190px;
+        }
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 7px 50px;
+            background-color: rgb(82, 212, 255);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);   
+            position: sticky;
+        }
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #navbar li {
+            list-style: none;
+            padding: 0 20px;
+            position: relative;
+        }
+        #navbar li a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a; 
+            transition: 0.3s ease;
+        }
+        #navbar li a:hover,
+        #navbar li a.active {
+            color:rgb(40, 26, 133);
+        }
+        #navbar li a.active::after,
+        #navbar li a:hover::after {
+            content: "";
+            width: 30%;
+            height: 2px;
+            background:rgb(40, 26, 133);
+            position: absolute;
+            bottom: -4px;
+            left: 20px;
+        }
+        #home {
+            background-color: #e3fdff;
+            padding: 80px 80px;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;  
+        }
+        #home button {
+            background-color: rgb(192, 254, 254);
+            border: 0;
+            padding: 14px 80px 14px 65px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 15px;
+        }
+        #best-prods {
+            text-align: center; 
+            padding: 80px 80px;
+        }
+        #best-prods .best-prods-box {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 80px;
+            flex-wrap: wrap;
+        }
+        #best-prods .pro {
+            width: 23%;
+            min-width: 250px;
+            padding: 10px 12px;
+            border: 1px solid #cce7d0;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+            transition: 0.2s ease;
+            position: relative;
+        }
+        #best-prods .pro:hover {
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.06);
+        }
+        #best-prods .pro .des {
+            text-align: start;
+            padding: 10px 0;
+        }
+        #best-prods .pro .des span {
+            color:darkblue;
+            font-size: 12px;
+        }
+        #best-prods .pro .des h5 {
+            padding-top: 7px;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+        #best-prods .pro .des i {
+            font-size: 12px;
+            color: rgb(255, 204, 74);
+        }
+        #best-prods .pro .des h4 {
+            padding-top: 7px;
+            font-size: 15px;
+            font-weight: 700;
+            color:darkblue;
+        }
+        #best-prods .pro .cart {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50px;
+            background-color:rgb(190, 239, 255);
+            font-weight: 500;
+            color: darkblue;
+            border: 1px solid #cce7d0;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+        }
+        #home .bestdeals {
+            color: #1a1a1a;
+        }
+        #newsletter {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            background-image: url(https://i.pinimg.com/736x/c8/73/0f/c8730f0b83f92b539de4bd0be92140a5.jpg);
+            background-repeat: no-repeat;
+            background-position: 20% 30%;
+            background-size: cover;
+        }
+        #newsletter h4 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        #newsletter p {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        #newsletter p span {
+            color:rgb(0, 255, 255);
+        }
+        #newsletter input {
+            height: 3.125rem;
+            padding: 0 1.25em;
+            font-size: 14px;
+            width: 100%;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            outline: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        #newsletter button {
+            padding: 5px;
+            background-color: rgb(0, 204, 255);
+            color: rgb(255, 255, 255);
+            white-space: nowrap;
+            border: 0;
+            border-radius: 5px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        #newsletter .form {
+            display: flex;
+            width: 40%;
+        }
+        #foot {
+            background-color: rgb(181, 255, 255);
+        }
+        footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        footer .col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        footer h4 {
+            font-size: 14px;
+            padding-bottom: 20px;
+        }
+        footer p {
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        footer .follow {
+            margin-top: 20px;
+        }
+        footer .follow i {
+            color:darkblue;
+            padding-right: 4px;
+            cursor: pointer;
+        }
+        footer .col paytm {
+            padding: 100px;
+        }
+    </style>
+    </head>
+    <body>
+        <section id = "header"> 
+            <a href = "#"> <img src = "logo.png" class = "logo"> </a>
+            <div> 
+                <ul id = "navbar">
+                    <li> <a class="active" href = "C:\Users\KIIT\ecommerce_website.html">Home</a> </li>
+                    <li> <a href = >Shop</a> </li>
+                    <li> <a href = >About</a> </li>
+                    <li> <a href = >Contact</a> </li>
+                    <li> <a href = ><i class="far fa-shopping-bag"></i></a></li>
+                </ul>
+            </div>
+        </section>
+        <section id = "home">
+            <img src = "bg_home.png" align = "right" width="320px" height="314px">
+            <h1>Best deals</h1>
+            <h1 style = "color: rgb(40, 26, 133)">For the fauji within you</h1>
+            <p>Flat 50% off on orders above 1299/-</p>
+            <button><h4>Buy Now!</h4></button>
+        </section>
+        <section id = "best-prods" class = "section-p1">
+            <h2> Best - Sellers </h2>
+            <h5>Our customers' favorites</h5>
+            <div class = "best-prods-box">
+                <div class = "pro">
+                    <img id = "imgwid" src = "bsp1.webp">
+                    <div class = "des">
+                        <span>Aero Armour</span>
+                        <h5>IAF T-shirt</h5>
+                        <div class = "star">
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                        </div>
+                        <h4>₹799</h4>
+                    </div>
+                    <a href = "#"> <i class = "fas fa-shopping-cart cart"> </i></a>
+                </div>
+                <div class = "pro">
+                    <img id = "imgwid" src = "bsp2.webp">
+                    <div class = "des">
+                        <span>Aero Armour</span>
+                        <h5>Air Force Pride T-shirt</h5>
+                        <div class = "star">
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                        </div>
+                        <h4>₹799</h4>
+                    </div>
+                    <a href = "#"> <i class = "fas fa-shopping-cart cart"> </i></a>
+                </div>
+                <div class = "pro">
+                    <img id = "imgwid" src = "bsp3.webp">
+                    <div class = "des">
+                        <span>Aero Armour</span>
+                        <h5>Sukhoi Su30 MKI T-shirt</h5>
+                        <div class = "star">
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                        </div>
+                        <h4>₹799</h4>
+                    </div>
+                    <a href = "#"> <i class = "fas fa-shopping-cart cart"> </i></a>
+                </div>
+                <div class = "pro">
+                    <img id = "imgwid" src = "bsp4.jpg">
+                    <div class = "des">
+                        <span>Ektarfa</span>
+                        <h5>IAF Hoodie</h5>
+                        <div class = "star">
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                        </div>
+                        <h4>₹1099</h4>
+                    </div>
+                    <a href = "#"> <i class = "fas fa-shopping-cart cart"> </i></a>
+                </div>
+            </div>
+        </section>
+        <section id = "newsletter" class = "section-p1 section-m1">
+            <div class = "newstext">
+                <h4>Sign Up for Our Newsletter!</h4>
+                <p>Get E-mail updates about our <span>latest releases.</span></p>
+            </div>
+            <div class = "form">
+                <input type = "text" placeholder = "Enter your E-mail ID">
+                <button class = "normal">Sign Up</button>
+            </div>
+        </section>
+        <footer id = "foot" class = "section-p1">
+            <div class = "col">
+                <img src = "logo.png" class = "logo">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong>  Lodi Estate, New Delhi - 110003, Delhi, India</p>
+                <p><strong>Phone:</strong>  +91-813-007-122</p>
+                <p><strong>Hours:</strong>  9:00hrs to 17:00hrs, Mon to Fri</p>
+                <div class = "follow">
+                    <h4>Follow us</h4>
+                    <div class = "icon">
+                        <i class = "fab fa-facebook-f"> </i>
+                        <i class = "fab fa-instagram"> </i>
+                        <i class = "fab fa-twitter"> </i>
+                        <i class = "fab fa-youtube"> </i>
+                        <i class = "fab fa-pinterest-p"></i>
+                    </div>
+                </div>
+            </div>
+            <div class = "col">
+                <h4>About Us</h4>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+                <p>Delivery Information</p>
+                <p>Contact Us</p>
+            </div>
+            <div class = "col">
+                <h4>My Account</h4>
+                <p>Sign In</p>
+                <p>My Wishlist</p>
+                <p>Track My Order</p>
+                <p>Help</p>
+            </div>
+            <div class = "col">
+                <h4>Secure Payment Gateways</h4>
+                <img src = "payment_gateway.png" width="250px" class = "paytm">
+            </div>
+        </footer>
+    </body>
+</html>
