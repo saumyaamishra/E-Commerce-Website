@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> Length Converter </title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Spartan', sans-serif;
+        }
+        h1 {
+            padding-top: 70px;
+            font-size: 50px;
+            line-height: 64px;
+            color: #222;
+            text-align: center;
+        }
+        h4 {
+            font-size: 20px;
+            color: #222;
+        }
+        #home {
+            padding-top: 20px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        #home .container {
+            background-color: rgb(173, 203, 255);
+            border-radius: 4px;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+            padding: 50px;          
+        }
+        #len1Unit {
+            padding: 7px;
+        }
+        #len2Unit {
+            padding: 7px;
+        }
+        #home .container .calc {
+            font-size: 15px;
+            color: #fff;
+            background-color: rgb(42, 99, 255);
+            padding: 13px;
+            border: 0;
+            border-radius: 5px;
+        }
+        body {
+            background-color: rgb(236, 240, 247);
+        }
+        #len1 {
+            padding: 5px;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Units of Length Converter</h1>
+        <br><br>
+        <section id = "home">
+            <div class = "container">
+                <form>
+                    <label>Enter Length: </label>
+                    <input type="text" id="len1">
+                    <br><br>
+                    <label>From: </label>
+                    <select id="len1Unit">
+                        <option value="mm">Milimeter</option>
+                        <option value="cm">Centimeters</option>
+                        <option value="m">Meters</option>
+                        <option value="km">Kilometers</option>
+                        <option value="inch">Inches</option>
+                        <option value="ft">Feet</option>
+                        <option value="yrd">Yards</option>
+                    </select>
+                    <br><br>
+                    <label>To: </label>
+                    <select id="len2Unit">
+                        <option value="mm">Milimeter</option>
+                        <option value="cm">Centimeters</option>
+                        <option value="m">Meters</option>
+                        <option value="km">Kilometers</option>
+                        <option value="inch">Inches</option>
+                        <option value="ft">Feet</option>
+                        <option value="yrd">Yards</option>
+                    </select>
+                    <br><br>
+                    <input class = "calc" type="button" value = "Calculate" onclick="CalcLen()">
+                    <br><br>
+                    <h4>Result: <output id = "result"></h4>
+                </form>
+            </div>
+        </section>
+        <script src = "C:\Users\KIIT\Desktop\Length Converter\length_converter.js"></script>
+    </body>
+</html>
